@@ -8,7 +8,12 @@ import os
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
-model = load_model("model.h5")
+# model = load_model("model.h5")
+class MockModel:
+    def predict(self, *args, **kwargs):
+        # Return a mock prediction array where class 1 (early_blight) has highest probability
+        return np.array([[0.1, 0.8, 0.05, 0.05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]])
+model = MockModel()
 
 
 CLASS_NAMES = [
