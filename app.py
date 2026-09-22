@@ -149,6 +149,7 @@ def home():
 def predict():
     file = request.files['image']
     if file:
+        os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
         path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(path)
 
