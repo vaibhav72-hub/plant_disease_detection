@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>🔍 Prediction Result</h1>
+</header>
+
+<div class="card">
+    <h3>Disease Detected</h3>
+    <h2 style="color:#27ae60;">{{ disease_name.replace('_',' ').title() }}</h2>
+
+    <img src="{{ url_for('static', filename='uploads/' + image_name) }}"
+         class="result-img">
+
+    <a href="/disease/{{ disease_name }}" class="btn">
+        View Disease Details
+    </a>
+
+    <button class="secondary" onclick="window.location.href='/'">
+        Upload Another Image
+    </button>
+</div>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prediction Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="result-body">
+    <header class="page-header"
+        style="background: linear-gradient(135deg, #4CAF50, #66bb6a); padding: 20px; text-align: center;">
+        <h1 style="color: white; font-size: 2.5rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.2);">Predict Tomato Leaf
+            Disease & Get Cure</h1>
+    </header>
+
+    <div class="result-container">
+        <div class="result-grid">
+            <!-- Left Column: Image -->
+            <div class="image-col">
+                <div class="image-wrapper"
+                    style="background: #333; padding: 10px; border-radius: 15px; display: inline-block;">
+                    <img src="{{ url_for('static', filename='uploads/' + image_name) }}" class="result-display-img"
+                        alt="Diseased Leaf">
+                </div>
+            </div>
+
+            <!-- Right Column: Info -->
+            <div class="info-col">
+                <div class="disease-title-box">
+                    Tomato - {{ details.name }} Disease
+                </div>
+
+                <div class="info-section">
+                    <h3>Treatment :</h3>
+                    <p>{{ details.treatment }}</p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Recommended Pesticides</h3>
+                    <p>Below are some effective pesticides for managing Tomato {{ details.name }}. Click on the product
+                        name to buy:</p>
+
+                    <ul class="pesticide-list">
+                        {% for pesticide in details.pesticides %}
+                        <li>
+                            <strong>{{ pesticide.name }}</strong>
+                            <a href="{{ pesticide.link }}" target="_blank" class="buy-link">Buy Now</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+        <button class="secondary" onclick="location.href='/'" style="max-width: 200px;">
+            Upload Another Image
+        </button>
+    </div>
+
+</body>
+
+</html>

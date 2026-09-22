@@ -1,0 +1,15 @@
+# Datasets & large files
+dataset/
+*.zip
+# *.h5 - Commented out because user wants the output pushed to github
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+plantenv/
+venv/
+
+# Uploads
+static/uploads/
