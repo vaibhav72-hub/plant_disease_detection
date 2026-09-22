@@ -3,6 +3,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import os
+import json
 
 
 app = Flask(__name__)
@@ -16,18 +17,22 @@ class MockModel:
 model = MockModel()
 
 
-CLASS_NAMES = [
-    "bacterial_spot",
-    "early_blight",
-    "late_blight",
-    "leaf_mold",
-    "septoria",
-    "spider_mites",
-    "target_spot",
-    "mosaic_virus",
-    "yellow_leaf_curl",
-    "healthy"
-]
+try:
+    with open("class_indices.json", "r") as f:
+        CLASS_NAMES = json.load(f)
+except FileNotFoundError:
+    CLASS_NAMES = [
+        "bacterial_spot",
+        "early_blight",
+        "late_blight",
+        "leaf_mold",
+        "septoria",
+        "spider_mites",
+        "target_spot",
+        "mosaic_virus",
+        "yellow_leaf_curl",
+        "healthy"
+    ]
 
 disease_info = {
     "bacterial_spot": {
@@ -151,8 +156,8 @@ def predict():
         disease = predict_disease(path)
 
         disease_details = disease_info.get(disease, {
-            "name": disease,
-            "description": "Information not available.",
+            "name": disease.replace("_", " ").title(),
+            "description": "Information not available for this plant/disease.",
             "treatment": "No treatment info available.",
             "pesticides": []
         })

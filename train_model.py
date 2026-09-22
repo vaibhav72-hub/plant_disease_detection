@@ -1,4 +1,5 @@
 import time
+import json
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
@@ -78,9 +79,14 @@ end_time = time.time()
 training_time = end_time - start_time
 
 # -----------------------------
-# Save Model
+# Save Model and Class Names
 # -----------------------------
 model.save("model.h5")
+
+class_indices = train_data.class_indices
+class_names = [k for k, v in sorted(class_indices.items(), key=lambda item: item[1])]
+with open("class_indices.json", "w") as f:
+    json.dump(class_names, f, indent=4)
 
 # -----------------------------
 # Results
