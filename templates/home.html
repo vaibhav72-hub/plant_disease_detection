@@ -1,46 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Tomato Disease Predictor</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=3">
+    <title>PlantGuard | Multi-Crop Disease Detection & Cure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=4">
 </head>
+<body>
 
-<body class="home-body">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="/" class="nav-brand">
+            <span class="brand-icon">🌿</span>
+            <div>
+                <span class="brand-name">PlantGuard AI</span>
+                <span class="brand-badge">Multi-Crop</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="#supported-crops" class="nav-link">Supported Plants</a>
+        </div>
+    </nav>
 
+    <!-- Main Container -->
+    <main class="main-wrapper">
+        <div class="bg-pattern"></div>
 
+        <section class="hero-card">
+            <!-- Header -->
+            <div class="hero-header">
+                <div class="hero-badge">
+                    <span>🔬</span> Deep Learning Multi-Plant Pathology
+                </div>
+                <h1 class="hero-title">Universal <span>Plant Disease</span> Detection & Cure</h1>
+                <p class="hero-subtitle">
+                    Upload a photo of any diseased leaf to instantly identify the plant species, diagnose the pathology, and receive verified organic & chemical remedies.
+                </p>
+            </div>
 
-    <div class="overlay"></div>
+            {% if is_mock_model %}
+            <div class="demo-banner">
+                <span>💡</span>
+                <div>
+                    <strong>Demo Preview Mode Active:</strong> Trained weights (<code>model.h5</code>) not found. To download the complete dataset and train your multi-crop model, run <code>python download_dataset.py</code> followed by <code>python train_model.py</code>.
+                </div>
+            </div>
+            {% endif %}
 
-    <div class="content-wrapper">
-        <h1 class="main-title">Predict Tomato Leaf Disease & Get Cure</h1>
+            <!-- Upload Form -->
+            <form action="/predict" method="POST" enctype="multipart/form-data" id="upload-form">
+                <div class="upload-zone" id="drop-zone" onclick="document.getElementById('leaf-input').click()">
+                    <span class="upload-icon">🍃</span>
+                    <p class="upload-prompt">Click to browse or drag & drop leaf image</p>
+                    <p class="upload-sub">Supports JPG, PNG, WEBP, JPEG (Max 16 MB)</p>
 
-        <div class="upload-box">
-            <form action="/predict" method="post" enctype="multipart/form-data" class="upload-form">
+                    <input type="file" name="image" id="leaf-input" accept="image/*" style="display: none;" onchange="handleFileSelect(this)" required>
 
-                <div class="file-input-wrapper">
-                    <button type="button" class="choose-file-btn"
-                        onclick="document.getElementById('file-upload').click()">Choose File</button>
-                    <input type="file" name="image" id="file-upload" onchange="updateFileName(this)" required>
-                    <span id="file-name">No file chosen</span>
+                    <div class="preview-container" id="preview-box">
+                        <img id="image-preview" class="preview-img" src="#" alt="Leaf Preview">
+                        <p class="file-info" id="file-name-label"></p>
+                    </div>
                 </div>
 
-                <br><br>
-
-                <button type="submit" class="predict-btn">Predict</button>
+                <button type="submit" class="action-btn" id="submit-btn">
+                    <span>🔍</span> Analyze Leaf & Get Diagnosis
+                </button>
             </form>
-        </div>
-    </div>
+
+            <!-- Supported Crops Showcase -->
+            <div class="crops-section" id="supported-crops">
+                <div class="crops-label">
+                    <span>Supported Crops ({{ total_classes }} Pathological Classes)</span>
+                    <span style="font-weight: 500; font-size: 0.8rem; text-transform: none;">PlantVillage Dataset</span>
+                </div>
+                <div class="crop-chips">
+                    <span class="crop-chip">🍅 Tomato</span>
+                    <span class="crop-chip">🥔 Potato</span>
+                    <span class="crop-chip">🫑 Bell Pepper</span>
+                    <span class="crop-chip">🌽 Corn (Maize)</span>
+                    <span class="crop-chip">🍏 Apple</span>
+                    <span class="crop-chip">🍇 Grape</span>
+                    <span class="crop-chip">🍑 Peach</span>
+                    <span class="crop-chip">🍒 Cherry</span>
+                    <span class="crop-chip">🍓 Strawberry</span>
+                    <span class="crop-chip">🫐 Blueberry</span>
+                    <span class="crop-chip">🌱 Soybean</span>
+                    <span class="crop-chip">🎃 Squash</span>
+                    <span class="crop-chip">🍊 Citrus (Orange)</span>
+                    <span class="crop-chip">🍇 Raspberry</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script>
-        function updateFileName(input) {
-            var fileName = input.files[0].name;
-            document.getElementById("file-name").innerText = fileName;
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('leaf-input');
+        const previewBox = document.getElementById('preview-box');
+        const previewImg = document.getElementById('image-preview');
+        const fileLabel = document.getElementById('file-name-label');
+
+        function handleFileSelect(input) {
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                fileLabel.textContent = "Selected: " + file.name;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImg.src = e.target.result;
+                    previewBox.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
         }
+
+        // Drag and drop handlers
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+            }, false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect(fileInput);
+            }
+        });
     </script>
-
 </body>
-
 </html>

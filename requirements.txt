@@ -5,3 +5,5 @@ flask
 werkzeug
 scipy
 gunicorn
+tensorflow>=2.10.0
+kagglehub

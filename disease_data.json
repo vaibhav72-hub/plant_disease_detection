@@ -1,0 +1,483 @@
+{
+  "Apple___Apple_scab": {
+    "plant": "Apple",
+    "disease_name": "Apple Scab",
+    "is_healthy": false,
+    "description": "Caused by the fungus Venturia inaequalis. It produces dull olive-green to black velvety spots on leaves, causing premature leaf drop and cracked fruit.",
+    "symptoms": "Olive-green or brown velvety spots on upper leaf surfaces, yellowing leaves, and rough corky lesions on fruit.",
+    "treatment": "Rake and destroy fallen leaves in autumn to reduce overwintering fungal spores. Prune canopy to improve air circulation and sunlight penetration. Apply fungicides preventively during bud break and wet spring weather.",
+    "organic_remedy": "Neem oil, sulfur sprays, or potassium bicarbonate applied at early bud break.",
+    "pesticides": [
+      {"name": "Bonide Captan 50W Fungicide", "link": "https://www.amazon.com/Bonide-Captan-Fungicide-Concentrate-4-Pound/dp/B000UJMRB4"},
+      {"name": "Monterey Liquid Copper Fungicide", "link": "https://www.amazon.com/Monterey-LG-3415-Liqui-Cop-Fungicide/dp/B000BWZ9U8"}
+    ]
+  },
+  "Apple___Black_rot": {
+    "plant": "Apple",
+    "disease_name": "Black Rot",
+    "is_healthy": false,
+    "description": "Caused by Diplodia seriata (Botryosphaeria obtusa). Affects leaves ('frogeye' spots), fruit (sunken dark decay with concentric rings), and limbs (cankers).",
+    "symptoms": "Small purple spots with tan centers on leaves, black cankers on limbs, and firm rotten fruit with concentric rings of black pustules.",
+    "treatment": "Prune out diseased twigs, mummified fruit, and dead wood. Sterilize pruning shears with 70% alcohol between cuts. Spray copper or captan fungicides during early growth.",
+    "organic_remedy": "Copper fungicide and thorough orchard sanitation.",
+    "pesticides": [
+      {"name": "Bonide Captan Multi-Purpose", "link": "https://www.amazon.com/Bonide-Captan-Fungicide-Concentrate-4-Pound/dp/B000UJMRB4"},
+      {"name": "Spectracide Immunox", "link": "https://www.amazon.com/Spectracide-Immunox-Multi-Purpose-Fungicide-Concentrate/dp/B0035H0RA8"}
+    ]
+  },
+  "Apple___Cedar_apple_rust": {
+    "plant": "Apple",
+    "disease_name": "Cedar Apple Rust",
+    "is_healthy": false,
+    "description": "Caused by Gymnosporangium juniperi-virginianae. Requires both apple/crabapple and eastern red cedar/juniper to complete its two-year lifecycle.",
+    "symptoms": "Bright yellow-orange spots on upper leaf surfaces, with tiny tube-like projections forming on leaf undersides in late summer.",
+    "treatment": "Remove nearby eastern red cedar trees or galls within several hundred yards. Apply protective fungicides when cedar galls begin producing orange gelatinous tendrils in spring.",
+    "organic_remedy": "Sulfur-based fungicides applied as flower buds first show color until petals fall.",
+    "pesticides": [
+      {"name": "Spectracide Immunox Fungicide", "link": "https://www.amazon.com/Spectracide-Immunox-Multi-Purpose-Fungicide-Concentrate/dp/B0035H0RA8"},
+      {"name": "Bonide Mancozeb Flowable", "link": "https://www.amazon.com/Bonide-862-Mancozeb-Flowable-Concentrate/dp/B000UJQY3S"}
+    ]
+  },
+  "Apple___healthy": {
+    "plant": "Apple",
+    "disease_name": "Healthy Apple Tree",
+    "is_healthy": true,
+    "description": "The apple foliage shows vibrant green color, strong leaf integrity, and no signs of bacterial or fungal infection.",
+    "symptoms": "Smooth, vibrant green leaves without spotting, rust, or wilting.",
+    "treatment": "Maintain proper seasonal pruning, balanced N-P-K fertilizer, and good soil drainage.",
+    "organic_remedy": "Dormant oil spray in late winter to prevent overwintering pests.",
+    "pesticides": [
+      {"name": "Espoma Organic Fruit Tree Fertilizer", "link": "https://www.amazon.com/Espoma-Organic-Tone-Plant-Food/dp/B002Y0AK5Q"}
+    ]
+  },
+  "Blueberry___healthy": {
+    "plant": "Blueberry",
+    "disease_name": "Healthy Blueberry Bush",
+    "is_healthy": true,
+    "description": "Leaves are crisp, green, and functioning optimally with no signs of mummy berry, leaf scorch, or rust.",
+    "symptoms": "Deep green, glossy leaves with consistent vigor.",
+    "treatment": "Maintain acidic soil (pH 4.5 - 5.5) using pine bark mulch and elemental sulfur as required.",
+    "organic_remedy": "Organic acidifying fertilizer and consistent drip irrigation.",
+    "pesticides": [
+      {"name": "Down to Earth Acid Mix Organic Fertilizer", "link": "https://www.amazon.com/Down-Earth-Acid-Mix-4-3-6/dp/B000CO80OW"}
+    ]
+  },
+  "Cherry_(including_sour)___Powdery_mildew": {
+    "plant": "Cherry",
+    "disease_name": "Powdery Mildew",
+    "is_healthy": false,
+    "description": "Caused by Podosphaera clandestina. Fungal pathogen producing white talcum-powder-like patches on young leaves and fruit.",
+    "symptoms": "Leaves curl upward showing white powdery fungal mats, young shoots become distorted and stunted.",
+    "treatment": "Prune interior branches to increase sunlight and reduce humidity. Apply horticultural oils or sulfur sprays at shuck-fall.",
+    "organic_remedy": "Potassium bicarbonate (MilStop) or horticultural neem oil.",
+    "pesticides": [
+      {"name": "Monterey Bi-Carb Old Fashioned Fungicide", "link": "https://www.amazon.com/Monterey-Bi-Carb-Fungicide-Treatment/dp/B000BWZ9T4"},
+      {"name": "Daconil Fungicide Concentrate", "link": "https://www.amazon.com/GardenTech-Daconil-Fungicide-Concentrate-16-Ounce/dp/B000RUJZS6"}
+    ]
+  },
+  "Cherry_(including_sour)___healthy": {
+    "plant": "Cherry",
+    "disease_name": "Healthy Cherry Tree",
+    "is_healthy": true,
+    "description": "Vigorous green leaves, strong branch formation, and absence of leaf spots or fungal growth.",
+    "symptoms": "Healthy dark green leaves and clean bark.",
+    "treatment": "Annual pruning for light penetration, protective bird netting, and regular irrigation during fruit swell.",
+    "organic_remedy": "Organic compost tea and mulch.",
+    "pesticides": [
+      {"name": "Southern Ag Citrus & Fruit Fertilizer", "link": "https://www.amazon.com/Southern-Ag-Citrus-Fruit-Nut/dp/B0053N6D0M"}
+    ]
+  },
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "plant": "Corn (Maize)",
+    "disease_name": "Cercospora Leaf Spot (Gray Leaf Spot)",
+    "is_healthy": false,
+    "description": "Caused by Cercospora zeae-maydis. One of the most destructive fungal foliar diseases of corn in warm, humid climates.",
+    "symptoms": "Rectangular, tan-to-gray lesions restricted between leaf veins with sharp parallel borders.",
+    "treatment": "Plant resistant hybrid corn varieties. Rotate crops with non-grasses like soybeans. Till crop residue to bury fungal inoculants.",
+    "organic_remedy": "Bio-fungicides containing Bacillus amyloliquefaciens or Trichoderma.",
+    "pesticides": [
+      {"name": "Headline AMP Fungicide / Pyraclostrobin", "link": "https://www.amazon.com/Pyraclostrobin-Corn-Fungicide/dp/B004GD5V4G"},
+      {"name": "Quadris Fungicide (Azoxystrobin)", "link": "https://www.amazon.com/Quadris-Flowable-Fungicide-Gallon/dp/B004GBL52Q"}
+    ]
+  },
+  "Corn_(maize)___Common_rust_": {
+    "plant": "Corn (Maize)",
+    "disease_name": "Common Rust",
+    "is_healthy": false,
+    "description": "Caused by Puccinia sorghi. Carried by wind currents from southern regions, flourishing in cool, moist conditions.",
+    "symptoms": "Oval, cinnamon-brown pustules scattered across both upper and lower leaf surfaces that rupture to release powdery spores.",
+    "treatment": "Utilize rust-resistant corn hybrids. Fungicide applications are justified when rust appears before tasseling on susceptible hybrids.",
+    "organic_remedy": "Sulfur dust or copper soap applications during early vegetative stages.",
+    "pesticides": [
+      {"name": "Tebuconazole / Propiconazole Systemic Fungicide", "link": "https://www.amazon.com/Propiconazole-Fungicide-Spectracide/dp/B0035H0RA8"},
+      {"name": "Daconil Multi-Crop Fungicide", "link": "https://www.amazon.com/GardenTech-Daconil-Fungicide-Concentrate-16-Ounce/dp/B000RUJZS6"}
+    ]
+  },
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "plant": "Corn (Maize)",
+    "disease_name": "Northern Corn Leaf Blight",
+    "is_healthy": false,
+    "description": "Caused by Exserohilum turcicum. Can cause severe yield loss if infection occurs before pollination.",
+    "symptoms": "Long, elliptical cigar-shaped lesions (1-6 inches long) that turn grayish-green to tan.",
+    "treatment": "Plant resistant corn hybrids (Ht genes). Rotate crops every two years. Apply foliar fungicides if symptoms appear on ear leaf or above around silking.",
+    "organic_remedy": "Crop debris shredding and deep tillage rotation.",
+    "pesticides": [
+      {"name": "Stratego YLD Fungicide", "link": "https://www.amazon.com/Fungicide-Corn-Foliar/dp/B000RUJZS6"},
+      {"name": "Southern Ag Liquid Copper", "link": "https://www.amazon.com/Southern-Ag-Liquid-Fungicide-16oz/dp/B004GD5V4G"}
+    ]
+  },
+  "Corn_(maize)___healthy": {
+    "plant": "Corn (Maize)",
+    "disease_name": "Healthy Corn",
+    "is_healthy": true,
+    "description": "Robust, deep green foliage with uniform leaf whorls, strong stalk development, and no fungal pustules.",
+    "symptoms": "Vibrant green leaves with uniform coloration and clear leaf veins.",
+    "treatment": "Ensure adequate nitrogen side-dressing during V6 stage and timely irrigation during silking and grain fill.",
+    "organic_remedy": "Enriched organic compost and bio-fertilizers.",
+    "pesticides": [
+      {"name": "Slow-Release Nitrogen Fertilizer", "link": "https://www.amazon.com/Southern-Ag-All-Purpose-Fertilizer/dp/B003SOTNMY"}
+    ]
+  },
+  "Grape___Black_rot": {
+    "plant": "Grape",
+    "disease_name": "Grape Black Rot",
+    "is_healthy": false,
+    "description": "Caused by Guignardia bidwellii. Can ruin up to 80% of crop yield in warm, wet climates.",
+    "symptoms": "Tan circular lesions on leaves bordered by dark brown rings with black dots; berries turn brown, shrivel into hard black mummies.",
+    "treatment": "Remove mummified berries and infected canes during dormant pruning. Open canopy to promote rapid leaf drying. Apply protective fungicides before spring rain.",
+    "organic_remedy": "Copper fungicide and liquid sulfur applied before bloom and at 10-14 day intervals.",
+    "pesticides": [
+      {"name": "Immunox Multi-Purpose Fungicide", "link": "https://www.amazon.com/Spectracide-Immunox-Multi-Purpose-Fungicide-Concentrate/dp/B0035H0RA8"},
+      {"name": "Bonide Captan 50W", "link": "https://www.amazon.com/Bonide-Captan-Fungicide-Concentrate-4-Pound/dp/B000UJMRB4"}
+    ]
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "plant": "Grape",
+    "disease_name": "Esca (Black Measles)",
+    "is_healthy": false,
+    "description": "A complex trunk disease caused by fungi including Phaeomoniella chlamydospora and Phaeoacremonium minimum.",
+    "symptoms": "Leaves exhibit 'tiger-stripe' interveinal chlorosis and necrosis. Berries develop small dark spots resembling measles.",
+    "treatment": "Protect pruning wounds with wound sealant or biocontrol agents (Trichoderma). Prune infected canes back to healthy white wood. Avoid pruning in rainy weather.",
+    "organic_remedy": "Trichoderma-based pruning wound paste.",
+    "pesticides": [
+      {"name": "Tebuconazole Trunk Protector", "link": "https://www.amazon.com/Spectracide-Immunox-Multi-Purpose-Fungicide-Concentrate/dp/B0035H0RA8"},
+      {"name": "Tree Pruning Sealer", "link": "https://www.amazon.com/Tanglefoot-Tree-Pruning-Sealer-1-Quart/dp/B000VYF0QO"}
+    ]
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "plant": "Grape",
+    "disease_name": "Leaf Blight (Isariopsis Leaf Spot)",
+    "is_healthy": false,
+    "description": "Caused by Pseudocercospora vitis (Isariopsis clavispora). Attacks foliage in late summer and can cause defoliation.",
+    "symptoms": "Irregular dark brown patches on leaves with dark borders and olive felt on the underside during moist weather.",
+    "treatment": "Prune foliage to maximize air circulation. Destroy fallen leaves in late fall to reduce inoculum. Apply protective sprays after petal fall.",
+    "organic_remedy": "Copper hydroxide spray or neem formulations.",
+    "pesticides": [
+      {"name": "Southern Ag Liquid Copper", "link": "https://www.amazon.com/Southern-Ag-Liquid-Fungicide-16oz/dp/B004GD5V4G"},
+      {"name": "Mancozeb Fungicide", "link": "https://www.amazon.com/Bonide-862-Mancozeb-Flowable-Concentrate/dp/B000UJQY3S"}
+    ]
+  },
+  "Grape___healthy": {
+    "plant": "Grape",
+    "disease_name": "Healthy Grapevine",
+    "is_healthy": true,
+    "description": "Vigorous green leaves, strong vine tendrils, and clean clusters without powdery mildew or rot.",
+    "symptoms": "Broad, vibrant green leaves with strong cuticle layer and clear venation.",
+    "treatment": "Maintain balanced cordon training, shoot thinning, and consistent deficit irrigation after fruit set.",
+    "organic_remedy": "Seaweed kelp foliar spray and compost mulching.",
+    "pesticides": [
+      {"name": "Maxicrop Liquid Seaweed Fertilizer", "link": "https://www.amazon.com/Maxicrop-Liquid-Seaweed-Concentrate-1-Quart/dp/B000COBUQC"}
+    ]
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "plant": "Orange / Citrus",
+    "disease_name": "Huanglongbing (Citrus Greening)",
+    "is_healthy": false,
+    "description": "A devastating bacterial disease caused by Candidatus Liberibacter asiaticus, transmitted by the Asian citrus psyllid (Diaphorina citri).",
+    "symptoms": "Asymmetrical blotchy yellow mottling across leaf veins, small bitter lopsided green fruit, and severe tree decline.",
+    "treatment": "There is currently no cure for infected trees. Manage the vector (Asian citrus psyllid) aggressively. Remove heavily infected declining trees to protect surrounding orchards.",
+    "organic_remedy": "Insecticidal soap, horticultural oil sprays to suppress psyllid nymphs, and foliar micronutrient feeding.",
+    "pesticides": [
+      {"name": "Imidacloprid Systemic Insecticide", "link": "https://www.amazon.com/Compare-N-Save-Systemic-Tree-Shrub-Drench/dp/B00ARKSC4E"},
+      {"name": "Monterey Garden Insect Spray (Spinosad)", "link": "https://www.amazon.com/Monterey-LG6135-Garden-Insect-Spinosad/dp/B002BP12LI"}
+    ]
+  },
+  "Peach___Bacterial_spot": {
+    "plant": "Peach",
+    "disease_name": "Bacterial Spot",
+    "is_healthy": false,
+    "description": "Caused by Xanthomonas arboricola pv. pruni. Infects leaves, twigs, and fruit, particularly in warm sandy areas with frequent rain.",
+    "symptoms": "Angular purple-black spots that drop out giving leaves a 'shot-hole' appearance. Pitted, gum-oozing fruit lesions.",
+    "treatment": "Plant resistant cultivars. Avoid excessive nitrogen which promotes tender susceptible tissue. Apply low rates of copper during dormant and pre-bloom stages.",
+    "organic_remedy": "Copper octanoate (copper soap) or oxytetracycline applications.",
+    "pesticides": [
+      {"name": "Kocide / Liquid Copper Fungicide", "link": "https://www.amazon.com/Southern-Ag-Liquid-Fungicide-16oz/dp/B004GD5V4G"},
+      {"name": "Bonide Copper Fungicide Dust", "link": "https://www.amazon.com/Bonide-811-Copper-Fungicide-4-Pound/dp/B000UJMWJ2"}
+    ]
+  },
+  "Peach___healthy": {
+    "plant": "Peach",
+    "disease_name": "Healthy Peach Tree",
+    "is_healthy": true,
+    "description": "Lush green foliage with straight lanceolate leaves, vigorous new growth, and unblemished bark.",
+    "symptoms": "Long, pointed dark green leaves with no shot-holes or curling.",
+    "treatment": "Open-center pruning for maximum sunlight penetration, thinning fruit to 6-8 inches apart, and regular watering.",
+    "organic_remedy": "Dormant oil spray in winter to control scale and mites.",
+    "pesticides": [
+      {"name": "Espoma Tree-tone Plant Food", "link": "https://www.amazon.com/Espoma-Organic-Tone-Plant-Food/dp/B002Y0AK5Q"}
+    ]
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "plant": "Bell Pepper",
+    "disease_name": "Bacterial Spot",
+    "is_healthy": false,
+    "description": "Caused by Xanthomonas campestris pv. vesicatoria. Survives in seed and crop residues, spreading rapidly via water splash.",
+    "symptoms": "Small yellow-green water-soaked spots on leaves that turn brown with yellow halos. Severe leaf drop exposing fruit to sunscald.",
+    "treatment": "Use certified disease-free seeds and resistant varieties. Avoid overhead sprinkler irrigation. Apply preventive copper sprays tank-mixed with mancozeb.",
+    "organic_remedy": "Copper hydroxide mixed with Bacillus subtilis bio-fungicide.",
+    "pesticides": [
+      {"name": "Bonide Copper Fungicide", "link": "https://www.amazon.com/Bonide-811-Copper-Fungicide-4-Pound/dp/B000UJMWJ2"},
+      {"name": "Southern Ag Mancozeb Concentrate", "link": "https://www.amazon.com/Bonide-862-Mancozeb-Flowable-Concentrate/dp/B000UJQY3S"}
+    ]
+  },
+  "Pepper,_bell___healthy": {
+    "plant": "Bell Pepper",
+    "disease_name": "Healthy Bell Pepper",
+    "is_healthy": true,
+    "description": "Sturdy green leaves with smooth margins, strong stems, and uniform floral/fruit development.",
+    "symptoms": "Firm, emerald green leaves with no chlorosis, lesions, or webbing.",
+    "treatment": "Maintain steady moisture (mulch with straw), feed with calcium and potassium, and support heavy branches with cages.",
+    "organic_remedy": "Fish and seaweed emulsion foliar feeding.",
+    "pesticides": [
+      {"name": "Neptune's Harvest Organic Fish & Seaweed", "link": "https://www.amazon.com/Neptunes-Harvest-Fish-Seaweed-Fertilizer/dp/B000OWB56O"}
+    ]
+  },
+  "Potato___Early_blight": {
+    "plant": "Potato",
+    "disease_name": "Early Blight",
+    "is_healthy": false,
+    "description": "Caused by Alternaria solani. A common fungal disease that attacks aging foliage, reducing tuber size and yield.",
+    "symptoms": "Dark brown to black spots with concentric rings (target-like pattern), often surrounded by a yellow halo on lower leaves.",
+    "treatment": "Practice a 3-4 year crop rotation. Avoid overhead irrigation to keep leaves dry. Mulch around plants to block spore splash. Apply protective fungicides early in season.",
+    "organic_remedy": "Copper soap or potassium bicarbonate sprays combined with certified clean seed tubers.",
+    "pesticides": [
+      {"name": "Daconil Multi-Crop Fungicide", "link": "https://www.amazon.com/GardenTech-Daconil-Fungicide-Concentrate-16-Ounce/dp/B000RUJZS6"},
+      {"name": "Bonide Mancozeb Flowable", "link": "https://www.amazon.com/Bonide-862-Mancozeb-Flowable-Concentrate/dp/B000UJQY3S"}
+    ]
+  },
+  "Potato___Late_blight": {
+    "plant": "Potato",
+    "disease_name": "Late Blight",
+    "is_healthy": false,
+    "description": "Caused by Phytophthora infestans (the organism responsible for the historic Irish potato famine). An aggressive water mold that destroys plants in days under cool, wet conditions.",
+    "symptoms": "Large, dark brown to purple water-soaked spots on leaves that turn greasy. White moldy fuzz appears on leaf undersides in high humidity.",
+    "treatment": "Destroy all infected plants and cull piles immediately. Do not compost late-blight infected foliage. Apply protective fungicides immediately upon weather warnings.",
+    "organic_remedy": "Fixed copper fungicides applied prior to infection.",
+    "pesticides": [
+      {"name": "Monterey Liqui-Cop Copper Fungicide", "link": "https://www.amazon.com/Monterey-LG-3415-Liqui-Cop-Fungicide/dp/B000BWZ9U8"},
+      {"name": "Bonide Copper Dust", "link": "https://www.amazon.com/Bonide-811-Copper-Fungicide-4-Pound/dp/B000UJMWJ2"}
+    ]
+  },
+  "Potato___healthy": {
+    "plant": "Potato",
+    "disease_name": "Healthy Potato Plant",
+    "is_healthy": true,
+    "description": "Healthy potato vines show robust leaf growth, dense foliage, and absence of target spots or water-soaked lesions.",
+    "symptoms": "Lush green compound leaves without wilting, chlorosis, or necrotic margins.",
+    "treatment": "Hill soil around stems to protect developing tubers from sunlight (greening) and fungal spores. Ensure regular deep watering.",
+    "organic_remedy": "High-potassium organic fertilizer and compost.",
+    "pesticides": [
+      {"name": "Organic Potato & Vegetable Fertilizer", "link": "https://www.amazon.com/Espoma-PT18-Plant-Tone-Organic-Fertilizer/dp/B003SOTNMY"}
+    ]
+  },
+  "Raspberry___healthy": {
+    "plant": "Raspberry",
+    "disease_name": "Healthy Raspberry Bush",
+    "is_healthy": true,
+    "description": "Strong canes with serrated green leaves, free of cane blight, rust, or anthracnose.",
+    "symptoms": "Vibrant green leaves with white-felted undersides and sturdy canes.",
+    "treatment": "Prune out spent floricanes after harvest. Trellis canes for airflow and mulch with wood chips.",
+    "organic_remedy": "Dormant lime-sulfur spray in early spring.",
+    "pesticides": [
+      {"name": "Down to Earth Organic Berry Fertilizer", "link": "https://www.amazon.com/Down-Earth-Acid-Mix-4-3-6/dp/B000CO80OW"}
+    ]
+  },
+  "Soybean___healthy": {
+    "plant": "Soybean",
+    "disease_name": "Healthy Soybean",
+    "is_healthy": true,
+    "description": "Trifoliate leaves are uniformly green and vibrant, showing strong nodulation and no frogeye leaf spots or rust.",
+    "symptoms": "Dark green trifoliate leaflets with intact edges and healthy pods.",
+    "treatment": "Maintain balanced phosphorus and potassium levels, practice crop rotation, and inspect for aphid populations.",
+    "organic_remedy": "Rhizobium inoculant at planting and bio-pesticides.",
+    "pesticides": [
+      {"name": "Bradyrhizobium Japonicum Seed Inoculant", "link": "https://www.amazon.com/Legume-Inoculant-Garden-Seed-Ounce/dp/B003SLWZEE"}
+    ]
+  },
+  "Squash___Powdery_mildew": {
+    "plant": "Squash / Cucurbit",
+    "disease_name": "Powdery Mildew",
+    "is_healthy": false,
+    "description": "Caused by Podosphaera xanthii or Erysiphe cichoracearum. White fungal patches coat leaves, leading to chlorosis, premature leaf death, and reduced yield.",
+    "symptoms": "White talc-like powder spots covering upper and lower surfaces of leaves and stems. Affected leaves turn yellow, brown, and brittle.",
+    "treatment": "Space plants generously for sunlight and airflow. Water at the base without wetting leaves. Spray milk dilution (40% milk, 60% water) or potassium bicarbonate early.",
+    "organic_remedy": "Neem oil or potassium bicarbonate (1 tbsp per gallon water) sprayed weekly.",
+    "pesticides": [
+      {"name": "Southern Ag Triple Action Neem Oil", "link": "https://www.amazon.com/Organic-Neem-Bliss-100-Pressed/dp/B0716JF8MB"},
+      {"name": "Daconil Ready-to-Use Fungicide", "link": "https://www.amazon.com/GardenTech-Daconil-Fungicide-Ready-Use/dp/B000RUI5SY"}
+    ]
+  },
+  "Strawberry___Leaf_scorch": {
+    "plant": "Strawberry",
+    "disease_name": "Leaf Scorch",
+    "is_healthy": false,
+    "description": "Caused by the fungus Diplocarpon earlianum. Causes purplish blotches on foliage that dry out and give leaves a scorched appearance.",
+    "symptoms": "Numerous small, dark purple or brown spots that enlarge and merge. Leaf margins curl upward and turn brown/scorched.",
+    "treatment": "Plant resistant strawberry varieties. Renovate strawberry beds after harvest by mowing old foliage. Avoid overhead sprinklers.",
+    "organic_remedy": "Copper fungicide applied early in spring as new growth starts.",
+    "pesticides": [
+      {"name": "Spectracide Immunox Multi-Purpose", "link": "https://www.amazon.com/Spectracide-Immunox-Multi-Purpose-Fungicide-Concentrate/dp/B0035H0RA8"},
+      {"name": "Bonide Copper Fungicide", "link": "https://www.amazon.com/Bonide-811-Copper-Fungicide-4-Pound/dp/B000UJMWJ2"}
+    ]
+  },
+  "Strawberry___healthy": {
+    "plant": "Strawberry",
+    "disease_name": "Healthy Strawberry Plant",
+    "is_healthy": true,
+    "description": "Lush trifoliate foliage with rich green color, healthy runners, and unblemished blossoms and berries.",
+    "symptoms": "Bright green leaves with saw-toothed edges and firm texture.",
+    "treatment": "Clean straw mulch to elevate berries above wet soil. Consistent drip irrigation and organic fertilizer.",
+    "organic_remedy": "Pine straw mulch and organic fish emulsion.",
+    "pesticides": [
+      {"name": "Espoma Berry-tone Organic Plant Food", "link": "https://www.amazon.com/Espoma-Berry-Tone-Organic-Plant-Food/dp/B000OWDFI4"}
+    ]
+  },
+  "Tomato___Bacterial_spot": {
+    "plant": "Tomato",
+    "disease_name": "Bacterial Spot",
+    "is_healthy": false,
+    "description": "Caused by Xanthomonas species. Causes dark water-soaked spots on leaves and scabby raised spots on green fruits.",
+    "symptoms": "Small, dark brown to black circular lesions on leaves often surrounded by a yellow halo. Foliage may look burned.",
+    "treatment": "Remove infected plant parts immediately. Avoid overhead watering to reduce leaf moisture. Apply copper-based bactericides early in the season.",
+    "organic_remedy": "Copper octanoate combined with biological sprays containing Bacillus subtilis.",
+    "pesticides": [
+      {"name": "Bonide Copper Fungicide", "link": "https://www.amazon.com/Bonide-811-Copper-Fungicide-4-Pound/dp/B000UJMWJ2"},
+      {"name": "Southern Ag Liquid Copper", "link": "https://www.amazon.com/Southern-Ag-Liquid-Fungicide-16oz/dp/B004GD5V4G"}
+    ]
+  },
+  "Tomato___Early_blight": {
+    "plant": "Tomato",
+    "disease_name": "Early Blight",
+    "is_healthy": false,
+    "description": "Caused by Alternaria solani. A very common fungal disease starting on lower older leaves and moving upward.",
+    "symptoms": "Concentric dark brown rings resembling a target board with yellow surrounding tissue, starting from lower foliage.",
+    "treatment": "Improve air circulation and prune lower branches (bottom 12 inches). Mulch around plants to stop soil splash. Use chlorothalonil or mancozeb fungicides.",
+    "organic_remedy": "Copper soap fungicide and baking soda foliar sprays.",
+    "pesticides": [
+      {"name": "GardenTech Daconil Fungicide", "link": "https://www.amazon.com/GardenTech-Daconil-Fungicide-Concentrate-16-Ounce/dp/B000RUJZS6"},
+      {"name": "Bonide Mancozeb Flowable Concentrate", "link": "https://www.amazon.com/Bonide-862-Mancozeb-Flowable-Concentrate/dp/B000UJQY3S"}
+    ]
+  },
+  "Tomato___Late_blight": {
+    "plant": "Tomato",
+    "disease_name": "Late Blight",
+    "is_healthy": false,
+    "description": "Caused by Phytophthora infestans. A destructive disease that spreads fast during cool, damp weather, destroying plants rapidly.",
+    "symptoms": "Large, dark greasy irregular patches on leaves and stems, with white fuzzy mold on leaf undersides in humid conditions.",
+    "treatment": "Remove and bag infected plants immediately. Do not leave plant debris in the field. Treat preventatively with copper fungicides.",
+    "organic_remedy": "Fixed copper fungicides applied prior to rain events.",
+    "pesticides": [
+      {"name": "Monterey Liqui-Cop Fungicide", "link": "https://www.amazon.com/Monterey-LG-3415-Liqui-Cop-Fungicide/dp/B000BWZ9U8"},
+      {"name": "Bonide Copper Fungicide Dust", "link": "https://www.amazon.com/Bonide-811-Copper-Fungicide-4-Pound/dp/B000UJMWJ2"}
+    ]
+  },
+  "Tomato___Leaf_Mold": {
+    "plant": "Tomato",
+    "disease_name": "Leaf Mold",
+    "is_healthy": false,
+    "description": "Caused by Passalora fulva (Fulvia fulva). Common in greenhouses and humid gardens with poor ventilation.",
+    "symptoms": "Pale green or yellow spots on upper leaf surfaces; corresponding olive-green velvety fungal mold on leaf undersides.",
+    "treatment": "Lower relative humidity below 85% by increasing spacing and ventilation. Avoid overhead irrigation. Apply protectant fungicides.",
+    "organic_remedy": "Neem oil or copper soap sprays.",
+    "pesticides": [
+      {"name": "Daconil Multi-Crop Concentrate", "link": "https://www.amazon.com/GardenTech-Daconil-Fungicide-Concentrate-16-Ounce/dp/B000RUJZS6"},
+      {"name": "Organic Cold-Pressed Neem Oil", "link": "https://www.amazon.com/Organic-Neem-Bliss-100-Pressed/dp/B0716JF8MB"}
+    ]
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "plant": "Tomato",
+    "disease_name": "Septoria Leaf Spot",
+    "is_healthy": false,
+    "description": "Caused by Septoria lycopersici. One of the most destructive diseases of tomato foliage in wet seasons.",
+    "symptoms": "Numerous small circular spots (1/8 inch) with dark brown borders and light gray or tan centers containing tiny black specks.",
+    "treatment": "Prune out bottom leaves touching soil. Apply a layer of organic mulch. Rotate crops every 2-3 years. Apply chlorothalonil or copper sprays.",
+    "organic_remedy": "Bio-fungicides (Bacillus subtilis) and liquid copper spray.",
+    "pesticides": [
+      {"name": "Bonide Copper Fungicide", "link": "https://www.amazon.com/Bonide-811-Copper-Fungicide-4-Pound/dp/B000UJMWJ2"},
+      {"name": "Spectracide Immunox Multi-Purpose", "link": "https://www.amazon.com/Spectracide-Immunox-Multi-Purpose-Fungicide-Concentrate/dp/B0035H0RA8"}
+    ]
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "plant": "Tomato",
+    "disease_name": "Two-Spotted Spider Mite",
+    "is_healthy": false,
+    "description": "Caused by Tetranychus urticae. Tiny arachnids that feed on plant sap, proliferating under hot and dry conditions.",
+    "symptoms": "Fine yellow or white stippling on leaves, accompanied by fine silky webbing on leaf undersides and growing tips.",
+    "treatment": "Spray plants with a strong stream of water to knock mites off. Introduce predatory mites (Phytoseiulus persimilis). Apply insecticidal soaps or miticides.",
+    "organic_remedy": "Insecticidal soap (potassium salts of fatty acids), horticultural oil, or cold-pressed neem oil.",
+    "pesticides": [
+      {"name": "Safer Brand Insect Killing Soap", "link": "https://www.amazon.com/Safer-Brand-5118-Insect-Killing/dp/B000BQL8UY"},
+      {"name": "Monterey Garden Insect Spray", "link": "https://www.amazon.com/Monterey-LG6135-Garden-Insect-Spinosad/dp/B002BP12LI"}
+    ]
+  },
+  "Tomato___Target_Spot": {
+    "plant": "Tomato",
+    "disease_name": "Target Spot",
+    "is_healthy": false,
+    "description": "Caused by Corynespora cassiicola. Attacks leaves, stems, and fruits, favored by warm temperatures and long dew periods.",
+    "symptoms": "Brown circular lesions that develop visible concentric rings and cause extensive defoliation.",
+    "treatment": "Remove lower diseased foliage. Stake plants to elevate leaves above ground. Apply protectant fungicides such as azoxystrobin or chlorothalonil.",
+    "organic_remedy": "Copper soap or Bacillus amyloliquefaciens biological fungicides.",
+    "pesticides": [
+      {"name": "Daconil Multi-Crop Fungicide", "link": "https://www.amazon.com/GardenTech-Daconil-Fungicide-Concentrate-16-Ounce/dp/B000RUJZS6"},
+      {"name": "Bonide Liquid Copper", "link": "https://www.amazon.com/Southern-Ag-Liquid-Fungicide-16oz/dp/B004GD5V4G"}
+    ]
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "plant": "Tomato",
+    "disease_name": "Yellow Leaf Curl Virus",
+    "is_healthy": false,
+    "description": "Transmitted by the sweetpotato whitefly (Bemisia tabaci). Severe infection causes bushy, stunted plants and floral abortion.",
+    "symptoms": "Upward curling and cupping of leaflets, intense interveinal chlorosis (yellowing), and severe growth stunting.",
+    "treatment": "There is no chemical cure for the virus. Control the whitefly vector using yellow sticky traps and insecticidal sprays. Pull and destroy infected plants promptly.",
+    "organic_remedy": "Neem oil or pyrethrin sprays to manage whiteflies; fine insect netting (mesh < 0.25mm).",
+    "pesticides": [
+      {"name": "Garsum Yellow Sticky Traps", "link": "https://www.amazon.com/Garsum-Sticky-Traps-Flying-Insects/dp/B07ZSC4CK1"},
+      {"name": "Monterey Garden Insect Spray (Spinosad)", "link": "https://www.amazon.com/Monterey-LG6135-Garden-Insect-Spinosad/dp/B002BP12LI"}
+    ]
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "plant": "Tomato",
+    "disease_name": "Tomato Mosaic Virus (ToMV)",
+    "is_healthy": false,
+    "description": "A highly stable, contagious tobamovirus transmitted mechanically via workers' hands, tools, and seeds.",
+    "symptoms": "Mottled light and dark green mosaic patterns on leaves, fern-like leaf distortion, and internal browning of fruit.",
+    "treatment": "Remove and burn or dispose of infected plants. Disinfect pruners and stakes with 20% nonfat dry milk or 10% bleach solution. Wash hands after handling tobacco.",
+    "organic_remedy": "Skim milk solution as a mechanical transmission inhibitor during pruning.",
+    "pesticides": [
+      {"name": "Neem Oil Spray (Preventative Vector Control)", "link": "https://www.amazon.com/Organic-Neem-Bliss-100-Pressed/dp/B0716JF8MB"}
+    ]
+  },
+  "Tomato___healthy": {
+    "plant": "Tomato",
+    "disease_name": "Healthy Tomato Plant",
+    "is_healthy": true,
+    "description": "Vibrant green leaves, strong erect stems, abundant flowering, and clean unblemished fruits.",
+    "symptoms": "Healthy dark green composite leaves with clear hair-covered surfaces and no lesions.",
+    "treatment": "Provide consistent deep watering (1-2 inches per week), sturdy cages or stakes, and a balanced tomato fertilizer.",
+    "organic_remedy": "Compost tea and organic calcium/magnesium supplement to prevent blossom end rot.",
+    "pesticides": [
+      {"name": "Espoma Tomato-tone Organic Fertilizer", "link": "https://www.amazon.com/Espoma-TT4-Tomato-Tone-Organic-Fertilizer/dp/B000OOW59A"}
+    ]
+  }
+}

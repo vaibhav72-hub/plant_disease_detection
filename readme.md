@@ -1,181 +1,121 @@
-TOMATO PLANT DISEASE DETECTION USING DEEP LEARNING
-================================================
+# 🌿 Multi-Plant Disease Detection System using Deep Learning
 
-This project detects diseases in tomato plant leaves using a
-Convolutional Neural Network (CNN) trained on the PlantVillage dataset.
-It provides a web interface using Flask to upload an image and view
-disease details.
+An end-to-end Computer Vision and Deep Learning web application designed to automatically identify crops and detect diseases across **38 classes** in **14 different agricultural plants** using the **PlantVillage dataset**.
 
-------------------------------------------------
-1. PROJECT STRUCTURE
-------------------------------------------------
+---
 
-TOMATO_PLANT/
-│
+## 🌟 Key Features
+
+- **Multi-Crop Detection**: Simultaneously classifies plant species and pathology across Tomato, Potato, Bell Pepper, Corn, Apple, Grape, Peach, Cherry, Strawberry, Blueberry, Soybean, Squash, and Citrus.
+- **Transfer Learning with MobileNetV2**: High-accuracy deep learning architecture pre-trained on ImageNet with custom classification head for fast convergence.
+- **Automated Dataset Downloader**: One-click download and directory preparation via `download_dataset.py` using `kagglehub`.
+- **Comprehensive Disease Knowledge Base**: Detailed diagnosis, symptoms, organic/cultural remedies, chemical treatments, and direct product links for each condition.
+- **Modern Responsive Web Interface**: Glassmorphism UI with live drag-and-drop image preview, diagnostic confidence meter, and clean report layout.
+
+---
+
+## 📁 Project Structure
+
+```text
+plant_disease_detection/
 ├── dataset/
-│   └── PlantVillage/
-│       ├── Tomato___Bacterial_spot/
-│       ├── Tomato___Early_blight/
-│       ├── Tomato___Late_blight/
-│       ├── Tomato___Leaf_Mold/
-│       ├── Tomato___Septoria_leaf_spot/
-│       ├── Tomato___Spider_mites/
-│       ├── Tomato___Target_Spot/
-│       ├── Tomato___Tomato_mosaic_virus/
-│       ├── Tomato___Tomato_Yellow_Leaf_Curl_Virus/
-│       └── Tomato___healthy/
-│
+│   └── PlantVillage/                  # 38 plant & disease subfolders
 ├── static/
 │   ├── css/
-│   │   └── style.css
-│   └── uploads/
-│
+│   │   └── style.css                  # Modern UI styles
+│   └── uploads/                       # Uploaded leaf images for diagnosis
 ├── templates/
-│   ├── index.html
-│   ├── predict.html
-│   └── diseases/
-│       ├── bacterial_spot.html
-│       ├── early_blight.html
-│       ├── late_blight.html
-│       ├── leaf_mold.html
-│       ├── septoria.html
-│       ├── spider_mites.html
-│       ├── target_spot.html
-│       ├── mosaic_virus.html
-│       ├── yellow_leaf_curl.html
-│       └── healthy.html
-│
-├── app.py
-├── train_model.py
-├── model.h5
-├── requirements.txt
-└── README.txt
+│   ├── home.html                      # Landing page with drag-and-drop upload
+│   └── predict.html                   # Detailed pathology report
+├── app.py                             # Flask web server & inference engine
+├── download_dataset.py                # Automated PlantVillage dataset downloader
+├── train_model.py                     # MobileNetV2 / CNN training pipeline
+├── disease_data.json                  # Knowledge base for all 38 classes
+├── class_indices.json                 # Label-to-class index mapping
+├── model.h5                           # Trained neural network weights
+└── requirements.txt                   # Project dependencies
+```
 
-------------------------------------------------
-2. SYSTEM REQUIREMENTS
-------------------------------------------------
+---
 
-• Python 3.9 or later (Recommended: Python 3.10)
-• Windows / Linux / macOS
-• Minimum 8 GB RAM recommended
-• GPU optional (CPU also works)
+## 🚀 Quickstart Guide
 
-------------------------------------------------
-3. CREATE VIRTUAL ENVIRONMENT (OPTIONAL)
-------------------------------------------------
+### 1. Set Up Virtual Environment
 
-Windows:
-> python -m venv venv
-> venv\Scripts\activate
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
 
-Linux / macOS:
-> python3 -m venv venv
-> source venv/bin/activate
+# Linux / macOS
+python3 -m venv venv
+source venv/bin/activate
+```
 
-------------------------------------------------
-4. INSTALL DEPENDENCIES
-------------------------------------------------
+### 2. Install Dependencies
 
-Run this command in the project root folder:
+```bash
+pip install -r requirements.txt
+```
 
-> pip install -r requirements.txt
+### 3. Download the Multi-Crop Dataset
 
-------------------------------------------------
-5. TRAIN THE MODEL
-------------------------------------------------
+To automatically download the PlantVillage dataset (~1.5 GB, 38 classes) and prepare the directory:
 
-This step trains the CNN model and also prints
-the total training time.
+```bash
+python download_dataset.py
+```
 
-Run:
+*Note: You can verify existing datasets anytime by running `python download_dataset.py --check`.*
 
->   ``  python train_model.py
-2
-Output includes:
-• Training accuracy & loss
-• Validation accuracy & loss
-• Total training time (seconds & minutes)
-• Saved model file: model.h5
+### 4. Train the Model
 
-NOTE:
-Training may take several minutes depending on
-system performance and dataset size.
+Train the MobileNetV2 transfer learning model (or lightweight CNN):
 
-------------------------------------------------
-6. RUN THE FLASK WEB APPLICATION
-------------------------------------------------
+```bash
+# Train using MobileNetV2 (Recommended for high accuracy >95%)
+python train_model.py --architecture mobilenet --epochs 10 --batch-size 32
 
-After training is complete, start the web app:
+# Or train using a custom CNN
+python train_model.py --architecture cnn --epochs 15
+```
 
-> python app.py
+The script will automatically:
+- Discover all classes in `dataset/PlantVillage/`
+- Apply data augmentation (flips, rotations, zoom)
+- Train with early stopping and learning rate scheduling
+- Save the trained weights to `model.h5` and class list to `class_indices.json`
 
-You should see:
-* Running on http://127.0.0.1:5000/
+### 5. Launch the Web Application
 
-------------------------------------------------
-7. USE THE WEB APPLICATION
-------------------------------------------------
+```bash
+python app.py
+```
 
-1. Open browser
-2. Go to:
-   http://127.0.0.1:5000/
-3. Upload a tomato leaf image
-4. Click "Predict"
-5. View:
-   • Predicted disease
-   • Uploaded image
-6. Click "View Disease Details"
-7. See prevention and treatment info
+Open your browser and navigate to:
+```text
+http://127.0.0.1:5000/
+```
 
-------------------------------------------------
-8. MODEL OUTPUT CLASSES
-------------------------------------------------
+Upload any crop leaf image to receive instant diagnosis, confidence score, and treatment recommendations!
 
-• Bacterial Spot
-• Early Blight
-• Late Blight
-• Leaf Mold
-• Septoria Leaf Spot
-• Spider Mites
-• Target Spot
-• Tomato Mosaic Virus
-• Yellow Leaf Curl Virus
-• Healthy
+---
 
-------------------------------------------------
-9. IMPORTANT NOTES
-------------------------------------------------
+## 🔬 Supported Crops & Pathologies (38 Classes)
 
-• Use clear leaf images for better accuracy
-• Dataset folder names must not be changed
-• Delete old images from static/uploads if needed
-• Retrain model if dataset is updated
-
-------------------------------------------------
-10. FUTURE ENHANCEMENTS
-------------------------------------------------
-
-• Confidence percentage display
-• Grad-CAM heatmaps
-• MobileNet / Transfer Learning
-• Video-based disease detection
-• Cloud deployment (AWS / Azure)
-
-------------------------------------------------
-PROJECT STATUS
-------------------------------------------------
-
-✔ Fully functional
-✔ Train + Predict
-✔ Web UI integrated
-✔ Ready for academic submission
-✔ Resume & interview ready
-
-------------------------------------------------
-
-
-
-python -m pip install --upgrade pip
-pip install tensorflow==2.10.1
-pip install numpy==1.23.5 pillow flask opencv-python
-pip install scipy
+| Crop | Supported Conditions / Diseases |
+| :--- | :--- |
+| **Tomato** | Early Blight, Late Blight, Bacterial Spot, Leaf Mold, Septoria Leaf Spot, Spider Mites, Target Spot, Mosaic Virus, Yellow Leaf Curl, Healthy |
+| **Potato** | Early Blight, Late Blight, Healthy |
+| **Bell Pepper** | Bacterial Spot, Healthy |
+| **Corn (Maize)** | Cercospora / Gray Leaf Spot, Common Rust, Northern Leaf Blight, Healthy |
+| **Apple** | Apple Scab, Black Rot, Cedar Apple Rust, Healthy |
+| **Grape** | Black Rot, Esca (Black Measles), Leaf Blight (Isariopsis Spot), Healthy |
+| **Peach** | Bacterial Spot, Healthy |
+| **Cherry** | Powdery Mildew, Healthy |
+| **Strawberry** | Leaf Scorch, Healthy |
+| **Blueberry** | Healthy |
+| **Soybean** | Healthy |
+| **Squash** | Powdery Mildew |
+| **Orange / Citrus**| Huanglongbing (Citrus Greening) |
+| **Raspberry** | Healthy |

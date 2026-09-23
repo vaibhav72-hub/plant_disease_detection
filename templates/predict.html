@@ -1,100 +1,140 @@
-<!-- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Prediction Result</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{{ plant_name }} - {{ disease_name }} | Diagnostic Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=4">
 </head>
 <body>
 
-<header>
-    <h1>🔍 Prediction Result</h1>
-</header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="/" class="nav-brand">
+            <span class="brand-icon">🌿</span>
+            <div>
+                <span class="brand-name">PlantGuard AI</span>
+                <span class="brand-badge">Multi-Crop</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Analyze New Leaf</a>
+        </div>
+    </nav>
 
-<div class="card">
-    <h3>Disease Detected</h3>
-    <h2 style="color:#27ae60;">{{ disease_name.replace('_',' ').title() }}</h2>
+    <div class="result-page-wrapper">
+        <div class="result-card">
 
-    <img src="{{ url_for('static', filename='uploads/' + image_name) }}"
-         class="result-img">
-
-    <a href="/disease/{{ disease_name }}" class="btn">
-        View Disease Details
-    </a>
-
-    <button class="secondary" onclick="window.location.href='/'">
-        Upload Another Image
-    </button>
-</div>
-
-</body>
-</html> -->
-
-
-
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Prediction Result</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-
-<body class="result-body">
-    <header class="page-header"
-        style="background: linear-gradient(135deg, #4CAF50, #66bb6a); padding: 20px; text-align: center;">
-        <h1 style="color: white; font-size: 2.5rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.2);">Predict Tomato Leaf
-            Disease & Get Cure</h1>
-    </header>
-
-    <div class="result-container">
-        <div class="result-grid">
-            <!-- Left Column: Image -->
-            <div class="image-col">
-                <div class="image-wrapper"
-                    style="background: #333; padding: 10px; border-radius: 15px; display: inline-block;">
-                    <img src="{{ url_for('static', filename='uploads/' + image_name) }}" class="result-display-img"
-                        alt="Diseased Leaf">
+            <!-- Dynamic Banner -->
+            <div class="result-banner {% if is_healthy %}banner-healthy{% else %}banner-diseased{% endif %}">
+                <div class="banner-title-group">
+                    <p style="text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-size: 0.85rem;">
+                        {{ plant_name }} Crop Analysis
+                    </p>
+                    <h2>{{ disease_name }}</h2>
+                </div>
+                <div class="status-badge">
+                    {% if is_healthy %}
+                        <span>🛡️</span> Healthy Foliage
+                    {% else %}
+                        <span>⚠️</span> Pathology Detected
+                    {% endif %}
                 </div>
             </div>
 
-            <!-- Right Column: Info -->
-            <div class="info-col">
-                <div class="disease-title-box">
-                    Tomato - {{ details.name }} Disease
-                </div>
-
-                <div class="info-section">
-                    <h3>Treatment :</h3>
-                    <p>{{ details.treatment }}</p>
-                </div>
-
-                <div class="info-section">
-                    <h3>Recommended Pesticides</h3>
-                    <p>Below are some effective pesticides for managing Tomato {{ details.name }}. Click on the product
-                        name to buy:</p>
-
-                    <ul class="pesticide-list">
-                        {% for pesticide in details.pesticides %}
-                        <li>
-                            <strong>{{ pesticide.name }}</strong>
-                            <a href="{{ pesticide.link }}" target="_blank" class="buy-link">Buy Now</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
+            {% if is_mock %}
+            <div style="padding: 15px 35px 0;">
+                <div class="demo-banner">
+                    <span>ℹ️</span>
+                    <div>
+                        <strong>Demo Inference:</strong> This prediction was generated using fallback mode because <code>model.h5</code> has not yet been trained on your local dataset. Run <code>python train_model.py</code> to train your CNN/MobileNetV2.
+                    </div>
                 </div>
             </div>
+            {% endif %}
+
+            <!-- Result Grid -->
+            <div class="result-body-grid">
+                
+                <!-- Left: Uploaded Leaf & Confidence -->
+                <div class="result-image-box">
+                    <img src="{{ url_for('static', filename='uploads/' + image_name) }}" alt="Diagnosed Leaf" class="leaf-image">
+                    
+                    <div class="confidence-box">
+                        <div class="confidence-header">
+                            <span>Diagnostic Confidence</span>
+                            <span style="color: var(--primary-dark); font-weight: 700;">{{ confidence }}%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: {{ confidence }}%;"></div>
+                        </div>
+                    </div>
+
+                    <div style="font-size: 0.85rem; color: #64748b; text-align: center;">
+                        <span>Leaf Sample: <code>{{ image_name }}</code></span>
+                    </div>
+                </div>
+
+                <!-- Right: Detailed Diagnosis & Remedies -->
+                <div class="diagnosis-details">
+
+                    <!-- Pathology Description -->
+                    <div class="detail-block">
+                        <h3><span>🔬</span> Condition Overview</h3>
+                        <p>{{ details.description }}</p>
+                    </div>
+
+                    <!-- Symptoms -->
+                    {% if details.symptoms %}
+                    <div class="detail-block">
+                        <h3><span>🔍</span> Observable Symptoms</h3>
+                        <p>{{ details.symptoms }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- Treatment Breakdown -->
+                    <div class="remedy-grid">
+                        <div class="remedy-card">
+                            <h4><span>🌱</span> Organic / Cultural Control</h4>
+                            <p>{{ details.organic_remedy or "Prune infected leaves, avoid overhead moisture, and maintain proper crop spacing." }}</p>
+                        </div>
+                        <div class="remedy-card">
+                            <h4><span>🧪</span> Chemical Treatment</h4>
+                            <p>{{ details.treatment }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Recommended Products / Pesticides -->
+                    {% if details.pesticides and details.pesticides|length > 0 %}
+                    <div class="detail-block">
+                        <h3><span>🛒</span> Recommended Pesticides & Fungicides</h3>
+                        <p style="margin-bottom: 8px;">Treat early with targeted bactericides or fungicides to halt spread:</p>
+                        <div class="product-items">
+                            {% for pesticide in details.pesticides %}
+                            <div class="product-item">
+                                <span class="product-name">{{ pesticide.name }}</span>
+                                <a href="{{ pesticide.link }}" target="_blank" rel="noopener noreferrer" class="buy-btn">
+                                    View / Buy Product ↗
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+
+            <!-- Footer Action -->
+            <div class="back-btn-wrapper">
+                <span style="font-size: 0.9rem; color: #64748b;">PlantGuard AI • Automated Plant Pathology</span>
+                <a href="/" class="secondary-btn">
+                    <span>←</span> Analyze Another Leaf
+                </a>
+            </div>
+
         </div>
     </div>
 
-    <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
-        <button class="secondary" onclick="location.href='/'" style="max-width: 200px;">
-            Upload Another Image
-        </button>
-    </div>
-
 </body>
-
 </html>
